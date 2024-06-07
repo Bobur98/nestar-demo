@@ -4,6 +4,7 @@ import { CssBaseline, createTheme } from "@mui/material";
 import type { AppProps } from "next/app";
 import { useState } from "react";
 import "../scss/app.scss";
+import "../scss/pc/main.scss";
 
 export default function App({ Component, pageProps }: AppProps) {
   // @ts-ignore
@@ -13,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }
