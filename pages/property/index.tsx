@@ -6,9 +6,9 @@ const PropertyList: NextPage = () => {
   console.log("PropertyList COMPONENT - PAGES ROUTER");
 
   return (
-    <>
-      <Container>PROPERTY LIST</Container>
-    </>
+    <div style={{ margin: "20px 0" }}>
+      <Stack className="container">PROPERTY LIST</Stack>
+    </div>
   );
 };
 export default withLayoutBasic(PropertyList);

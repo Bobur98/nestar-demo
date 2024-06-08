@@ -21,7 +21,7 @@ const withLayoutMain = (Component: any) => {
               <HeaderFilter />
             </Stack>
           </Stack>
-          s
+
           <Stack id="main">
             <Component {...props} />
           </Stack>
