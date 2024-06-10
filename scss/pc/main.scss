@@ -3,7 +3,7 @@
 @import '/scss/pc/homepage/homepage.scss';
 
 #pc-wrap {
-#top {
+  #top {
   .navbar {
     .navbar-main {
       position: fixed;
@@ -85,8 +85,8 @@
       }
     }
   }
-}
-.header-main {
+  }
+  .header-main {
   position: relative;
   width: 100%;
   height: 860px;
@@ -320,9 +320,9 @@
       } 
     }
   }
-}
+  }
 
-.header-basic { 
+  .header-basic { 
   position: relative;
   width: 100%;
   height: 557px;
@@ -354,8 +354,9 @@
       line-height: 26px;
     }
   }
-}
-#footer {
+  }
+
+  #footer {
  position: relative;
  padding: 60px 0 18px 0;
  width: 100%;
@@ -515,6 +516,5 @@
     }
   }
  }
-}
-
+  }
 }

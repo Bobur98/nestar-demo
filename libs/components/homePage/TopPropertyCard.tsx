@@ -6,7 +6,7 @@ const TopPropertyCard = () => {
     <Stack className="top-card-box">
       <Box
         className="card-img"
-        style={{ backgroundImage: `url{"/img/banner/types/apartment.webp}` }}
+        style={{ backgroundImage: `url("/img/banner/types/apartment.webp")` }}
       >
         <div>$42000</div>
       </Box>
