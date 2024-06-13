@@ -1,36 +1,64 @@
 import { Favorite, RemoveRedEye } from "@mui/icons-material";
 import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
+import Link from "next/link";
+import React from "react";
 
 const PropertyCard = () => {
+  const imagePath: string = "/img/banner/header1.svg";
+
   return (
-    <Stack className="top-card-box">
-      <Box
-        className="card-img"
-        style={{ backgroundImage: `url("/img/banner/types/apartment.webp")` }}
-      >
-        <div>$42000</div>
-      </Box>
-      <Box className="info">
-        <strong className="title">Run Will Buildings</strong>
-        <p className="desc">Seoul Gangnam Apartments</p>
-        <div className="options">
-          <div>
-            <img src="/img/icons/bed.svg" />
-            <span>3 bed</span>
-          </div>
-          <div>
+    <Stack className="card-config">
+      <Stack className="top">
+        <Link href={{ pathname: "/property/detail", query: { id: "test121" } }}>
+          <img src={imagePath} alt="" />
+        </Link>
+        <Box className="top-badge">
+          <img src="/img/icons/electricity.svg" alt="" />
+          <Typography color={"#fff !important"}>TOP</Typography>
+        </Box>
+        <Box className="price-box">
+          <Typography>$250000</Typography>
+        </Box>
+      </Stack>
+
+      <Stack className="bottom">
+        <Stack className="name-address">
+          <Stack className="name">
+            <Link
+              href={{ pathname: "/property/detail", query: { id: "test123" } }}
+            >
+              <Typography>Kingstone apartments</Typography>
+            </Link>
+          </Stack>
+          <Stack className="address">
+            <Typography>Busan, City Center 200-5</Typography>
+          </Stack>
+        </Stack>
+        <Stack className="options">
+          <Stack className="option">
+            <img src="/img/icons/bed.svg" alt="" />
+            <Typography>3 bed</Typography>
+          </Stack>
+          <Stack className="option">
             <img src="/img/icons/room.svg" alt="" />
-            <span>7 rooms</span>
-          </div>
-          <div>
+            <Typography>7 rooms</Typography>
+          </Stack>
+          <Stack className="option">
             <img src="/img/icons/expand.svg" alt="" />
-            <span>250 m2</span>
-          </div>
-        </div>
-        <Divider sx={{ mt: "15px", mb: "17px" }} />
-        <div className="bott">
-          <p>Rent</p>
-          <div className="view-like-box">
+            <Typography>250 m2</Typography>
+          </Stack>
+        </Stack>
+        <Stack className="divider"></Stack>
+        <Stack className="type-buttons">
+          <Stack className="type">
+            <Typography sx={{ fontWeight: "500", fontSize: "13px" }}>
+              Rent
+            </Typography>
+            <Typography sx={{ fontWeight: "500", fontSize: "13px" }}>
+              Barter
+            </Typography>
+          </Stack>
+          <Stack className="buttons">
             <IconButton color="default">
               <RemoveRedEye />
             </IconButton>
@@ -39,9 +67,9 @@ const PropertyCard = () => {
               <Favorite />
             </IconButton>
             <Typography className="view-cnt">200</Typography>
-          </div>
-        </div>
-      </Box>
+          </Stack>
+        </Stack>
+      </Stack>
     </Stack>
   );
 };
