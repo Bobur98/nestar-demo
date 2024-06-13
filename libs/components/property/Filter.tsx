@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import RefreshIcon from "@mui/icons-material/Refresh";
-import { propertySquare } from "../config";
+import { propertySquare } from "../../config";
 
 const Filter = () => {
   const [searchText, setSearchText] = useState<string>("");
